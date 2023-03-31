@@ -28,6 +28,13 @@ pipeline {
             }
         }
         }
+	     stage ('Code Quality') {
+        steps {
+            withSonarQubeEnv('My_SonarQube') {
+            sh 'mvn -f pom.xml sonar:sonar'
+            }
+      }
+    }
         stage('Verify ') {
             steps {
             script {
