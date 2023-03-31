@@ -43,13 +43,14 @@ pipeline {
         
             }
 	    
-	     stage('Building image') {
-      steps{
-        script {
-          dockerImage = docker.build imageName
+	     stage('Build') {
+            steps {
+                sh 'npm install'
+                sh 'npm run build'
+                sh 'docker build -t my-image .'
+            }
         }
-      }
-    }
+	   
 
         stage('Verify ') {
             steps {
