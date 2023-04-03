@@ -15,7 +15,7 @@ pipeline {
 		stage("Checkout from SCM"){
             steps {
                 script {
-                    sh "git clone https://github.com/Dewank7852/jenkins-pipeline2.git"				
+                    sh "git clone https://github.com/gurleen1608/jenkins-pipeline2.git"				
                 }
             }
         }
