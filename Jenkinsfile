@@ -37,7 +37,7 @@ pipeline {
     }
 	     stage ('Nexus upload') {
                 steps {
-                           nexusArtifactUploader artifacts: [[artifactId: 'gs-spring-boot-docker', classifier: '', file: 'target/gs-spring-boot-docker-0.1.0.jar', type: 'jar']], credentialsId: 'c854664b-d6c4-4710-8c54-cb84e654e684', groupId: 'org.springframework.boot', nexusUrl: '35.87.132.224:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-snapshots', version: '0.1.0-SNAPSHOT'
+                           nexusArtifactUploader artifacts: [[artifactId: 'gs-spring-boot-docker', classifier: '', file: 'target/gs-spring-boot-docker-0.1.0.jar', type: 'jar']], credentialsId: '65330c2f-582f-4f0f-8391-8adf7e8f5e3f', groupId: 'org.springframework.boot', nexusUrl: '13.235.248.146:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-snapshots', version: '0.1.0-SNAPSHOT'
  
                 }
         
